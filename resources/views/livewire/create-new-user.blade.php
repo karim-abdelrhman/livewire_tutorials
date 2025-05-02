@@ -11,14 +11,17 @@
                             <div class="col-md-4">
                                 <label for="">Name</label>
                                 <input class="form-control col-md-4" type="text" name="name" wire:model="name">
+                                @error('name') <div class="alert alert-danger">{{$message}}</div> @enderror
                             </div>
                             <div class="col-md-4">
                                 <label for="">Email</label>
-                                <input class="form-control col-md-4" type="text" name="email" wire:model="email">
+                                <input class="form-control col-md-4" type="email" name="email" wire:model="email">
+                                @error('email') <div class="alert alert-danger">{{$message}}</div> @enderror
                             </div>
                             <div class="col-md-4">
                                 <label for="">Password</label>
                                 <input class="form-control col-md-4" type="password" name="name" wire:model="password">
+                                @error('password') <div class="alert alert-danger">{{$message}}</div> @enderror
                             </div>
                         </div>
                         <button type="submit" class="btn btn-success mt-3" >
