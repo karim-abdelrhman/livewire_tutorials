@@ -5,9 +5,12 @@ namespace App\Livewire;
 use App\Models\User;
 use Livewire\Attributes\Validate;
 use Livewire\Component;
+use Livewire\WithPagination;
 
 class CreateNewUser extends Component
 {
+    use withPagination;
+
     #[validate('required' , message: 'please enter a name')]
     #[validate('min:3' , message: 'please note that the name must be at least 3 characters long')]
     public $name;
@@ -29,7 +32,7 @@ class CreateNewUser extends Component
     public function render()
     {
         return view('livewire.create-new-user' , [
-            'users' => User::all(),
+            'users' => User::paginate(3),
         ]);
     }
 }
