@@ -76,7 +76,14 @@
 
         <div class="page-body">
             <div class="container-xl">
-                @livewire('create-new-user')
+                <div class="row row-cards">
+                    <div class="col-md-8">
+                        @livewire('user-lists')
+                    </div>
+                    <div class="col-md-4">
+                        @livewire('create-new-user')
+                    </div>
+                </div>
             </div>
         </div>
     </div>

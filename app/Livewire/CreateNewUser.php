@@ -39,8 +39,6 @@ class CreateNewUser extends Component
     }
     public function render()
     {
-        return view('livewire.create-new-user' , [
-            'users' => User::orderBy('id', 'DESC')->paginate(3),
-        ]);
+        return view('livewire.create-new-user');
     }
 }
