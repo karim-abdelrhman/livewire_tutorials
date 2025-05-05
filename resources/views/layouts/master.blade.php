@@ -76,14 +76,16 @@
 
         <div class="page-body">
             <div class="container-xl">
-                <div class="row row-cards">
-                    <div class="col-md-8">
-                        @livewire('user-lists')
-                    </div>
-                    <div class="col-md-4">
-                        @livewire('create-new-user')
-                    </div>
-                </div>
+                {{ $slot }}
+{{--                <div class="row row-cards">--}}
+{{--                    <div class="col-md-8">--}}
+{{--                        @livewire('user-lists')--}}
+{{--                        <livewire:user-lists ></livewire:user-lists>--}}
+{{--                    </div>--}}
+{{--                    <div class="col-md-4">--}}
+{{--                        @livewire('create-new-user')--}}
+{{--                    </div>--}}
+{{--                </div>--}}
             </div>
         </div>
     </div>
