@@ -3,10 +3,12 @@
 namespace App\Livewire;
 
 use App\Models\User;
+use Livewire\Attributes\Url;
 use Livewire\Component;
 
 class UserLists extends Component
 {
+    #[Url(as: 's' , history: true)]
     public $search;
     public User $user;
 
