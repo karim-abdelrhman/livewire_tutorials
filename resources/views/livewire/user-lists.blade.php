@@ -37,7 +37,7 @@
                             <button class="btn btn-danger"
                                     type="button"
                                     wire:click="delete({{$user->id}})"
-                                    wire:confirm="Are you sure you want to delete this guy?">Delete</button>
+                                    wire:confirm.prompt="Are you sure you want to delete this guy?\n type yes |yes">Delete</button>
                             <button class="btn btn-success">Edit</button>
                         </td>
                     </tr>
