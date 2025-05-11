@@ -16,11 +16,17 @@ class UserLists extends Component
     {
         $this->user = $user;
     }
+
+    public function delete(User $user)
+    {
+        $user->delete();
+        flash()->success('Successfully deleted');
+    }
     public function render()
     {
         return view('livewire.user-lists' , [
             'users' => User::where('name' , 'like' , "%{$this->search}%")->paginate(3),
-            'user' => $this->user,
+
         ]);
     }
 }

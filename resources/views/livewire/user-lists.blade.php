@@ -34,7 +34,10 @@
                             @endif
                         </td>
                         <td>
-                            <button class="btn btn-danger">Delete</button>
+                            <button class="btn btn-danger"
+                                    type="button"
+                                    wire:click="delete({{$user->id}})"
+                                    wire:confirm="Are you sure you want to delete this guy?">Delete</button>
                             <button class="btn btn-success">Edit</button>
                         </td>
                     </tr>
