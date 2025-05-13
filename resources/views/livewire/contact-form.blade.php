@@ -43,6 +43,7 @@
                 </div>
                 <livewire:drop-down></livewire:drop-down>
                 <livewire:select2></livewire:select2>
+                <livewire:wire-variable></livewire:wire-variable>
             </div>
             <div class="card-footer text-end">
                 <button type="submit" class="btn btn-primary">Submit</button>
