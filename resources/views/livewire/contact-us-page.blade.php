@@ -8,7 +8,8 @@
                 <div class="mb-3">
                     <label class="form-label required">Name</label>
                     <div>
-                        <input wire:model="form.name" type="text" class="@error('form.name') is-valid @enderror form-control"
+                        <input wire:model="form.name" type="text"
+                               class="@error('form.name') is-valid @enderror form-control"
                                placeholder="Enter Your Name">
                         @error('form.name')
                         <div class="alert alert-danger">{{$message}}</div>
@@ -19,7 +20,8 @@
                 <div class="mb-3">
                     <label class="form-label required">Email address</label>
                     <div>
-                        <input wire:model="form.email" type="email" class="@error('form.email') is-valid @enderror form-control"
+                        <input wire:model="form.email" type="email"
+                               class="@error('form.email') is-valid @enderror form-control"
                                aria-describedby="emailHelp"
                                placeholder="Enter email">
                         @error('form.email')
@@ -38,6 +40,29 @@
                         @enderror
 
                     </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-6">
+                        <label for="company" class="mb-3">Company</label>
+                        <select wire:model.live="companyId" class="form-select">
+                            <option selected>select your phone company</option>
+                            @foreach($this->companies as $company)
+                                <option value="{{$company->id}}">{{$company->name}}</option>
+                            @endforeach
+                        </select>
+                    </div>
+
+                    <div class="col-6 ">
+                        <label for="phone" class="mb-3">Phones Models</label>
+                        <select wire:model.live="phoneId" id="phone" class="form-select">
+                            <option selected>select your phone brand</option>
+                            @foreach($this->phones as $phone)
+                                <option value="{{$phone->id}}">{{$phone->name}}</option>
+                            @endforeach
+                        </select>
+                    </div>
+
+
                 </div>
 
             </div>
